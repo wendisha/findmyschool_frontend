@@ -6,10 +6,11 @@ import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
+import usersReducer from './actions/users.js'
 
 
 
-const reducer = combineReducers({ users });
+const reducer = combineReducers({ user: usersReducer });
 
 // Newer way of setting up middleware
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
