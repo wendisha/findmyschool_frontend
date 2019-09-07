@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 const Login = () => {
     return (
@@ -10,4 +11,5 @@ const Login = () => {
     )
 }
 
-export default Login
+//Connect is a function that takes up to 4 arguments, and returns a function that takes a component and returns a component
+export default connect(mapStateToProps, { updateLoginForm, login } )(Login)
