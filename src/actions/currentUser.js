@@ -6,6 +6,12 @@ export const setCurrentUser = user => {
     }
 }
 
+export const clearCurrentUser = () => {
+    return {
+      type: "CLEAR_CURRENT_USER"
+    }
+}
+
 //ASYNCHRONOUS ACTION CREATORS:
 //this is a asynchronous action, we need to send a request to our back end in order to log in
 //Impt! Thunk gives us the ability to return an action creator in the form of a function! So our return is the same as saying return function (dispatch) { }
