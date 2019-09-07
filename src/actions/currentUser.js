@@ -15,7 +15,7 @@ export const login = credentials => {
             //post, because we're setting data about an user in the db
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify()
+            body: JSON.stringify(credentials)
         })
     }
 }
