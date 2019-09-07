@@ -13,6 +13,7 @@ export const login = credentials => {
         // localhost:3001 Rails Server 
         return fetch("http://localhost:3001/api/v1/login", {
             //post, because we're setting data about an user in the db
+            credentials: "include",
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(credentials)
@@ -32,7 +33,7 @@ export const login = credentials => {
 export const getCurrentUser = () => {
     return dispatch => {
       return fetch("http://localhost:3001/api/v1/get_current_user", {
-        // credentials: "include",
+        credentials: "include",
         method: "GET",
         headers: {
           "Content-Type": "application/json"
