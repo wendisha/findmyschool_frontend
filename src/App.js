@@ -2,6 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Login from './components/Login'
+import Logout from './components/Logout'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
 
@@ -13,7 +14,7 @@ class App extends React.Component {
   
     render(){
         return (
-            <Login />
+            this.props.currentUser ? <Logout /> : <Login />
   //   <div className="App">
   //     <header className="App-header">
   //       <img src={logo} className="App-logo" alt="logo" />
@@ -35,7 +36,8 @@ class App extends React.Component {
 }
 
 //Allow App.js to have knowledge of the current user, to show the Login button only if user is logged out and vice versa
-const mapStateToProps = state => {
+//The incoming argument (state) is an object, coming from Redux, therefore we can discontruct it and grab its currentUser property
+const mapStateToProps = ({currentUser}) => {
     return ({
         currentUser
     })
