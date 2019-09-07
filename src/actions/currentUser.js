@@ -60,7 +60,8 @@ export const getCurrentUser = () => {
 
 export const logout = () => {
     return dispatch => {
-        //If the user has clicked the Log Out button, they intended to log out, so we should log them out right away in the front end
+        //If the user has clicked the Log Out button, they intended to log out, so we should log them out right away in the front end, 
+        //instead of waiting for the backend to respond by resolving the fetch request.
         dispatch(clearCurrentUser())
         return fetch('http://localhost:3001/api/v1/logout', {
             //sends cookies back:
