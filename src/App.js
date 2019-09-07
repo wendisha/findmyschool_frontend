@@ -15,7 +15,6 @@ class App extends React.Component {
   
     render(){
         return (
-            // this.props.currentUser ? <Logout /> : <Login />
             <NavBar />
   //   <div className="App">
   //     <header className="App-header">
