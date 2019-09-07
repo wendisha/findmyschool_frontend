@@ -1,14 +1,14 @@
 //SYNCHRONOUS ACTION CREATORS: (synchronous action creators return POJOS (plain old js objects))
 export const setCurrentUser = user => {
     return {
-      type: "SET_CURRENT_USER",
-      user //payload: user
+        type: "SET_CURRENT_USER",
+        user //payload: user
     }
 }
 
 export const clearCurrentUser = () => {
     return {
-      type: "CLEAR_CURRENT_USER"
+        type: "CLEAR_CURRENT_USER"
     }
 }
 
@@ -39,32 +39,33 @@ export const login = credentials => {
 
 export const getCurrentUser = () => {
     return dispatch => {
-      return fetch("http://localhost:3001/api/v1/get_current_user", {
-        credentials: "include",
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json"
-        },
-      })
-      .then(r => r.json())
-      .then(user => {   
-          if (user.error) {
-              alert(user.error)
-          } else {
-              dispatch(setCurrentUser(user))
-          }
-      })
-      .catch(console.log)     
-  }
+        return fetch("http://localhost:3001/api/v1/get_current_user", {
+            credentials: "include",
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        })
+        .then(r => r.json())
+        .then(user => {   
+            if (user.error) {
+                alert(user.error)
+            } else {
+                dispatch(setCurrentUser(user))
+            }
+        })
+        .catch(console.log)     
+    }
 }
 
 export const logout = () => {
     return dispatch => {
-    //   dispatch(clearCurrentUser())
-      return fetch('http://localhost:3001/api/v1/logout', {
-        //sends cookies back:
-        credentials: "include",
-        method: "DELETE"
-      })
+        //If the user has clicked the Log Out button, they intended to log out, so we should log them out right away in the front end
+        dispatch(clearCurrentUser())
+        return fetch('http://localhost:3001/api/v1/logout', {
+            //sends cookies back:
+            credentials: "include",
+            method: "DELETE"
+        })
     }
 }
