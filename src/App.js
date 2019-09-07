@@ -6,17 +6,14 @@ import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
 
 class App extends React.Component {
-  componentDidMount() {
-    // class? then props!
-    this.props.getCurrentUser()
-  //   fetch("http://localhost:3001/api/v1/users/1")
-  //   .then(r=>r.json())
-  //   .then(console.log)
-  }
+    componentDidMount() {
+        // class? then props!
+        this.props.getCurrentUser()
+    }
   
-  render(){
-    return (
-      <Login />
+    render(){
+        return (
+            <Login />
   //   <div className="App">
   //     <header className="App-header">
   //       <img src={logo} className="App-logo" alt="logo" />
@@ -33,8 +30,16 @@ class App extends React.Component {
   //       </a>
   //     </header>
   //   </div>
-    );
-  }
+        );
+    }
 }
 
-export default connect(null, {getCurrentUser})(App);
+//Allow App.js to have knowledge of the current user, to show the Login button only if user is logged out and vice versa
+const mapStateToProps = state => {
+    return ({
+        currentUser
+    })
+}
+
+//getCurrentUser is out mapDispatchToProps
+export default connect(mapStateToProps, {getCurrentUser})(App);
