@@ -6,6 +6,7 @@ import './App.css';
 import NavBar from './components/NavBar.js'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
+import MainContainer from './components/MainContainer';
 
 class App extends React.Component {
     componentDidMount() {
@@ -15,7 +16,10 @@ class App extends React.Component {
   
     render(){
         return (
-            <NavBar />
+            <div className="App">
+                <NavBar />
+                <MainContainer />
+            </div>
   //   <div className="App">
   //     <header className="App-header">
   //       <img src={logo} className="App-logo" alt="logo" />
