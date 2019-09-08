@@ -1,3 +1,5 @@
+import { resetLoginForm } from "./loginForm.js"
+
 //SYNCHRONOUS ACTION CREATORS: (synchronous action creators return POJOS (plain old js objects))
 export const setCurrentUser = user => {
     return {
@@ -31,6 +33,8 @@ export const login = credentials => {
                 alert(r.error)
             } else {
                 dispatch(setCurrentUser(r.data))
+                //dispatch it here in case the user made a mistake while trying to log in, they're still able to see their info.
+                dispatch(resetLoginForm())
             }
         })
         .catch(console.log)     
