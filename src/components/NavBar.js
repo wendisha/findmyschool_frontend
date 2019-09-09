@@ -7,9 +7,9 @@ import Logout from './Logout.js'
 //Functional Component:
 const NavBar = ({ currentUser }) => {
     return (
-        // IMPORTANT!: map to get user's bookmarks??? AND conditional in case user doesnt have any bookmarks
+        // IMPORTANT!: Add conditional in case user doesnt have any bookmarks and link to them
         <div className="NavBar">
-            {currentUser ? `Welcome, ${currentUser.attributes.name} Your bookmarks: ${currentUser.relationships.bookmarks.data}` : ""} 
+            {currentUser ? `Welcome, ${currentUser.attributes.name} Your bookmarks: ${currentUser.attributes.bookmarks.map((b) => b.attributes.school_name)}` : ""} 
             {currentUser ? <Logout /> : <Login />}
         </div>
     )
