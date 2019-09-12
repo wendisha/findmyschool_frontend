@@ -30,11 +30,11 @@ class App extends React.Component {
             <div className="App">
                 <NavBar />
                 {/* <MainContainer /> */}
-                <Router />
+                <Router>
                     <Route exact path='/login' component={ Login }/>
                     <Route exact path='/logout' component={ Logout }/>
                     <Route exact path='/my-bookmarks' component={ MyBookmarks }/>
-                <Router />
+                </Router>
             </div>
   //   <div className="App">
   //     <header className="App-header">
