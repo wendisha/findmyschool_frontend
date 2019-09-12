@@ -19,8 +19,7 @@ export const getMyBookmarks = () => {
         if (r.error) {
           alert(r.error)
         } else {
-      
-          dispatch(setMyBookmarks([]))
+          dispatch(setMyBookmarks(r.data))
         }
       })
       .catch(console.log)
