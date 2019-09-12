@@ -1,4 +1,5 @@
 import { resetLoginForm } from "./loginForm.js"
+import { getMyBookmarks } from "./myBookmarks.js"
 
 //SYNCHRONOUS ACTION CREATORS: (synchronous action creators return POJOS (plain old js objects))
 export const setCurrentUser = user => {
@@ -33,6 +34,7 @@ export const login = credentials => {
                 alert(r.error)
             } else {
                 dispatch(setCurrentUser(r.data))
+                dispatch(getMyBookmarks())
                 //dispatch it here in case the user made a mistake while trying to log in, they're still able to see their info.
                 dispatch(resetLoginForm())
             }
@@ -56,6 +58,7 @@ export const getCurrentUser = () => {
                 alert(r.error)
             } else {
                 dispatch(setCurrentUser(r.data))
+                dispatch(getMyBookmarks())
             }
         })
         .catch(console.log)     
