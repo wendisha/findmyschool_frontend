@@ -1,10 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import BookmarkCard from './BookmarkCard.js' 
 
 //funtional container component:
-const MyBookmarks = () => {
+const MyBookmarks = props => {
+    const bookmarkCards = props.bookmarks.map(b => <BookmarkCard bookmark={b} />)
     return (
-
+        bookmarkCards.length > 0 ? bookmarkCards : null 
     )
 }
 
@@ -19,7 +21,7 @@ const MyBookmarks = () => {
 // to this particular component as props."
 const mapStateToProps = state => {
     return {
-      myBookmarks: state.myBookmarks
+      bookmarks: state.myBookmarks
     }
 }
 
