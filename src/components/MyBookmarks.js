@@ -4,11 +4,12 @@ import BookmarkCard from './BookmarkCard.js'
 
 //funtional container component:
 const MyBookmarks = props => {
-    const bookmarkCards = props.bookmarks.map(b => <BookmarkCard bookmark={b} />)
+    const bookmarkCards = props.bookmarks.length > 0 ? props.bookmarks.map(b => <BookmarkCard bookmark={b} key={b.id}/>) : null
     return (
-        bookmarkCards.length > 0 ? bookmarkCards : null 
+        bookmarkCards
     )
 }
+
 
 //We call this function mapStateToProps by convention, so that everyone knows what it is doing, but it could be named whatever
 //Here we grab our Bookmarks array from the state of the store!!!

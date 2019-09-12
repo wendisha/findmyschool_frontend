@@ -8,6 +8,9 @@ import Logout from './Logout.js'
 const NavBar = ({ currentUser }) => {
     return (
         // IMPORTANT!: Add conditional in case user doesnt have any bookmarks and link to them
+
+        
+        //DELETE BOOKMARKS FROM HERE!!!!
         <div className="NavBar">
             {currentUser ? `Welcome, ${currentUser.attributes.name} Your bookmarks: ${currentUser.attributes.bookmarks.map((b) => b.attributes.school_name)}` : ""} 
             {currentUser ? <Logout /> : <Login />}
