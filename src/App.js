@@ -6,7 +6,7 @@ import './App.css';
 import NavBar from './components/NavBar.js'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
-import MainContainer from './components/MainContainer'
+// import MainContainer from './components/MainContainer'
 import { BrowserRouter as Router, Route } from 'react-router-dom' //We need browser router to wrap our routes
 
 
@@ -28,7 +28,7 @@ class App extends React.Component {
                 <NavBar />
                 {/* <MainContainer /> */}
                 <Router />
-                    <Route />
+                    <Route exact path='/login' component={ Login }/>
                     <Route />
                     <Route />
                 <Router />
