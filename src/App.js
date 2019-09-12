@@ -6,7 +6,9 @@ import './App.css';
 import NavBar from './components/NavBar.js'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
-import MainContainer from './components/MainContainer';
+import MainContainer from './components/MainContainer'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
 
 class App extends React.Component {
     componentDidMount() {
