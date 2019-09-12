@@ -4,6 +4,8 @@ import './App.css';
 // import Login from './components/Login'
 // import Logout from './components/Logout'
 import NavBar from './components/NavBar.js'
+import Login from './components/Login.js'
+import Logout from './components/Logout.js'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
 // import MainContainer from './components/MainContainer'
