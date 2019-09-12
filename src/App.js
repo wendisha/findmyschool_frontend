@@ -11,7 +11,13 @@ import MainContainer from './components/MainContainer';
 class App extends React.Component {
     componentDidMount() {
         // class? then props!
-        this.props.getCurrentUser()
+        this.props.getCurrentUser()  
+        // https://api.greatschools.org/schools/CA/Alameda?key=f474a366f74c75cceff4a25e2ff19ed7
+        // fetch('https://api.greatschools.org/schools/CA/Alameda?key=f474a366f74c75cceff4a25e2ff19ed7', {
+        //     headers: {'Content-Type': 'application/json', 'Accepts': 'application/json'} 
+        // })
+        // .then(r => r.json())
+        // .then(r => console.log(r)  ) 
     }
   
     render(){
