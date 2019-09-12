@@ -31,7 +31,7 @@ class App extends React.Component {
                 {/* <MainContainer /> */}
                 <Router />
                     <Route exact path='/login' component={ Login }/>
-                    <Route />
+                    <Route exact path='/logout' component={ Logout }/>
                     <Route />
                 <Router />
             </div>
