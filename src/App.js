@@ -5,7 +5,7 @@ import './App.css';
 // import Logout from './components/Logout'
 import NavBar from './components/NavBar.js'
 import Login from './components/Login.js'
-import Logout from './components/Logout.js'
+import Signup from './components/Signup.js'
 import MyBookmarks from './components/MyBookmarks.js'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
@@ -31,6 +31,7 @@ class App extends React.Component {
                 <NavBar />
                 {/* <MainContainer /> */}
                 <div>
+                    <Route exact path='/signup' component={ Signup }/>
                     <Route exact path='/login' component={ Login }/>
                     <Route exact path='/my-bookmarks' component={ MyBookmarks }/>
                 </div>
