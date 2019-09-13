@@ -12,8 +12,9 @@ const NavBar = ({ currentUser }) => {
         
         //DELETE BOOKMARKS FROM HERE!!!!
         <div className="NavBar">
-            {currentUser ? `Welcome, ${currentUser.attributes.name} Your bookmarks: ${currentUser.attributes.bookmarks.map((b) => b.attributes.school_name)}` : ""} 
-            {currentUser ? <Logout /> : <Login />}
+            {currentUser ? `Welcome, ${currentUser.attributes.name}` : ""} 
+            <button>Log In</button> Or <button>Sign Up</button>
+            {/* {currentUser ? <Logout /> : <Login />} */}
         </div>
     )
 }
