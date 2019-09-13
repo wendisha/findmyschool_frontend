@@ -31,9 +31,11 @@ class App extends React.Component {
                 <NavBar />
                 {/* <MainContainer /> */}
                 <Router>
-                    <Route exact path='/login' component={ Login }/>
-                    <Route exact path='/logout' component={ Logout }/>
-                    <Route exact path='/my-bookmarks' component={ MyBookmarks }/>
+                    <div>
+                        <Route exact path='/login' component={ Login }/>
+                        <Route exact path='/logout' component={ Logout }/>
+                        <Route exact path='/my-bookmarks' component={ MyBookmarks }/>
+                    </div>
                 </Router>
             </div>
   //   <div className="App">
