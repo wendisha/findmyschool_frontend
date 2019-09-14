@@ -26,7 +26,8 @@ class App extends React.Component {
     }
   
     render(){
-        return (
+        return ( 
+            // this.props.currentUser ? <Logout /> : <Login />
             <div className="App">
                 <NavBar />
                 {/* <MainContainer /> */}
