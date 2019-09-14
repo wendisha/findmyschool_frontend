@@ -2,7 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 // import Login from './components/Login'
-// import Logout from './components/Logout'
+import Logout from './components/Logout'
 import NavBar from './components/NavBar.js'
 import Login from './components/Login.js'
 import Signup from './components/Signup.js'
@@ -29,6 +29,7 @@ class App extends React.Component {
         return ( 
             // this.props.currentUser ? <Logout /> : <Login />
             <div className="App">
+                <Logout />
                 <NavBar />
                 {/* <MainContainer /> */}
                 <div>
