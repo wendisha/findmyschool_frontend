@@ -1,4 +1,5 @@
 import { resetLoginForm } from "./loginForm.js"
+import { resetSignupForm } from "./signupForm.js"
 import { getMyBookmarks } from "./myBookmarks.js"
 
 //SYNCHRONOUS ACTION CREATORS: (synchronous action creators return POJOS (plain old js objects))
@@ -63,7 +64,7 @@ export const signup = (credentials) => {
           } else {
             dispatch(setCurrentUser(r.data))
             dispatch(getMyBookmarks())
-            // dispatch(resetSignupForm())
+            dispatch(resetSignupForm())
             // history.push('/')
           }
         })
