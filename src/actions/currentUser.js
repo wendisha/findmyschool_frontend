@@ -43,6 +43,34 @@ export const login = credentials => {
     }
 }
 
+export const signup = (credentials) => {
+    return dispatch => {
+      const userInfo = {
+        user: credentials
+      }
+      return fetch("http://localhost:3001/api/v1/signup", {
+        credentials: "include",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userInfo)
+      })
+        .then(r => r.json())
+        .then(r => {
+          if (r.error) {
+            alert(r.error)
+          } else {
+            dispatch(setCurrentUser(r.data))
+            dispatch(getMyBookmarks())
+            // dispatch(resetSignupForm())
+            // history.push('/')
+          }
+        })
+        .catch(console.log)
+    }
+}
+
 export const getCurrentUser = () => {
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/get_current_user", {
