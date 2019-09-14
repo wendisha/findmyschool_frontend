@@ -33,6 +33,7 @@ class App extends React.Component {
                 <NavBar />
                 {/* <MainContainer /> */}
                 <div>
+                    <Route exact path='/' component={ Home }/>
                     <Route exact path='/signup' component={ Signup }/>
                     <Route exact path='/login' component={ Login }/>
                     <Route exact path='/my-bookmarks' component={ MyBookmarks }/>
