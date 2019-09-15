@@ -67,5 +67,12 @@ class App extends React.Component {
 //     })
 // }
 
+const mapStateToProps = state => {
+    return ({
+      loggedIn: !!state.currentUser,
+      bookmarks: state.MyBookmarks
+    })
+}
+
 //getCurrentUser is out mapDispatchToProps
 export default connect(null, {getCurrentUser})(App);
