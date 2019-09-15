@@ -1,7 +1,6 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-// import Login from './components/Login'
 import Logout from './components/Logout'
 import NavBar from './components/NavBar.js'
 import Login from './components/Login.js'
@@ -27,6 +26,7 @@ class App extends React.Component {
     }
   
     render(){
+        const { loggedIn } = this.props
         return ( 
             // this.props.currentUser ? <Logout /> : <Login />
             <div className="App">
@@ -34,7 +34,7 @@ class App extends React.Component {
                 <NavBar />
                 {/* <MainContainer /> */}
                 <div>
-                    <Route exact path='/' render={ () => loggedIn? <MyBookmarks /> : <Home/> }/>
+                    <Route exact path='/' render={ () => loggedIn ? <MyBookmarks /> : <Home/> }/>
                     <Route exact path='/signup' component={ Signup }/>
                     <Route exact path='/login' component={ Login }/>
                     <Route exact path='/my-bookmarks' component={ MyBookmarks }/>
