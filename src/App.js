@@ -6,6 +6,7 @@ import Logout from './components/Logout'
 import NavBar from './components/NavBar.js'
 import Login from './components/Login.js'
 import Signup from './components/Signup.js'
+import Home from './components/Home.js'
 import MyBookmarks from './components/MyBookmarks.js'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
@@ -33,7 +34,7 @@ class App extends React.Component {
                 <NavBar />
                 {/* <MainContainer /> */}
                 <div>
-                    <Route exact path='/' render={ Home }/>
+                    <Route exact path='/' render={ () => loggedIn? <MyBookmarks /> : <Home/> }/>
                     <Route exact path='/signup' component={ Signup }/>
                     <Route exact path='/login' component={ Login }/>
                     <Route exact path='/my-bookmarks' component={ MyBookmarks }/>
@@ -75,4 +76,4 @@ const mapStateToProps = state => {
 }
 
 //getCurrentUser is out mapDispatchToProps
-export default connect(null, {getCurrentUser})(App);
+export default connect(mapStateToProps, {getCurrentUser})(App);
