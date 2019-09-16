@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
-import usersReducer from './reducers/users.js'
+// import usersReducer from './reducers/users.js'
 import currentUser from './reducers/currentUser.js'
 import myBookmarks from './reducers/myBookmarks.js'
 import loginForm from './reducers/loginForm.js'
@@ -7,7 +7,13 @@ import signupForm from './reducers/signupForm.js'
 import thunk from 'redux-thunk'
 
 //Displaying different syntax; could've user currentUser: currentUser
-const reducer = combineReducers({ users: usersReducer, currentUser, loginForm, myBookmarks, signupForm });
+const reducer = combineReducers({ 
+    // users: usersReducer, 
+    currentUser, 
+    loginForm, 
+    myBookmarks, 
+    signupForm 
+});
 
 // Newer way of setting up middleware
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
