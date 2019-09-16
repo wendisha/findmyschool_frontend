@@ -13,6 +13,7 @@ const NavBar = ({ currentUser }) => {
         
         //DELETE BOOKMARKS FROM HERE!!!!
         <div className="NavBar">
+            <NavLink exact activeClassName="active" to="/bookmarks">My Bookmarks</NavLink>
             {/* {currentUser ? `Welcome, ${currentUser.attributes.name}` : ""}  */}
             {/* <button>Log In</button> Or <button>Sign Up</button> */}
             {/* {currentUser ? <Logout /> : <Login />} */}
