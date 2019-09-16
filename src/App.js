@@ -38,7 +38,7 @@ class App extends React.Component {
                     <Route exact path='/' render={ () => loggedIn ? <MyBookmarks /> : <Home/> }/>
                     <Route exact path='/signup' component={ Signup }/>
                     <Route exact path='/login' component={ Login }/>
-                    <Route exact path='/my-bookmarks' component={ MyBookmarks }/>
+                    <Route exact path='/bookmarks' component={ MyBookmarks }/>
                 </Switch>
             </div>
   //   <div className="App">
