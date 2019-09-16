@@ -17,6 +17,7 @@ const NavBar = ({ currentUser }) => {
             {/* {currentUser ? `Welcome, ${currentUser.attributes.name}` : ""}  */}
             {/* <button>Log In</button> Or <button>Sign Up</button> */}
             {/* {currentUser ? <Logout /> : <Login />} */}
+            { loggedIn ? <Logout/> : null }
         </div>
     )
 }

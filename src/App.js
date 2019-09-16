@@ -30,7 +30,6 @@ class App extends React.Component {
         return ( 
             // this.props.currentUser ? <Logout /> : <Login />
             <div className="App">
-                { loggedIn ? <Logout/> : null }
                 {/* <Logout /> */}
                 <NavBar />
                 {/* <MainContainer /> */}
