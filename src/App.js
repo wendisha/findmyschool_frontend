@@ -76,4 +76,4 @@ const mapStateToProps = state => {
 }
 
 //getCurrentUser is out mapDispatchToProps
-export default connect(mapStateToProps, {getCurrentUser})(App);
+export default withRouter(connect(mapStateToProps, { getCurrentUser })(App));
