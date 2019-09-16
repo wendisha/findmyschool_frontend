@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 // import { NavLink } from 'react-router-dom'
 
 //Functional Component:
-const NavBar = ({ currentUser }) => {
+const NavBar = ({ currentUser, loggedIn }) => {
     return (
         // IMPORTANT!: Add conditional in case user doesnt have any bookmarks and link to them
 
@@ -32,8 +32,9 @@ const NavBar = ({ currentUser }) => {
 //Allow App.js to have knowledge of the current user, to show the Login button only if user is logged out and vice versa
 const mapStateToProps = ({ currentUser }) => {
     return {
-        currentUser
-    } 
-}
-
-export default connect(mapStateToProps)(NavBar)
+      currentUser,
+      loggedIn: !!currentUser
+    }
+  }
+  
+  export default connect(mapStateToProps)(NavBar)
