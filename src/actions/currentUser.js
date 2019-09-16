@@ -1,6 +1,6 @@
 import { resetLoginForm } from "./loginForm.js"
 import { resetSignupForm } from "./signupForm.js"
-import { getMyBookmarks } from "./myBookmarks.js"
+import { getMyBookmarks, clearBookmarks } from "./myBookmarks.js"
 
 //SYNCHRONOUS ACTION CREATORS: (synchronous action creators return POJOS (plain old js objects))
 export const setCurrentUser = user => {
