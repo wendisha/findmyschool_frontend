@@ -32,7 +32,7 @@ class App extends React.Component {
             <div className="App">
                 {/* <Logout /> */}
                 { loggedIn ? <NavBar/> : <Home/> }
-                <NavBar />
+                {/* <NavBar /> */}
                 {/* <MainContainer /> */}
                 <Switch>
                     {/* <Route exact path='/' render={ () => loggedIn ? <MyBookmarks /> : <Home/> }/> */}
