@@ -19,7 +19,7 @@ export const clearCurrentUser = () => {
 //ASYNCHRONOUS ACTION CREATORS:
 //this is a asynchronous action, we need to send a request to our back end in order to log in
 //Impt! Thunk gives us the ability to return an action creator in the form of a function! So our return is the same as saying return function (dispatch) { }
-export const login = credentials => {
+export const login = (credentials, history) => {
     return dispatch => {
         // localhost:3001 Rails Server 
         return fetch("http://localhost:3001/api/v1/login", {
@@ -38,6 +38,7 @@ export const login = credentials => {
                 dispatch(getMyBookmarks())
                 //dispatch it here in case the user made a mistake while trying to log in, they're still able to see their info.
                 dispatch(resetLoginForm())
+                history.push('/')
             }
         })
         .catch(console.log)     
