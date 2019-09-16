@@ -5,6 +5,12 @@ export const setMyBookmarks = bookmarks => {
     }
 }
 
+export const clearBookmarks = () => {
+  return {
+    type: "CLEAR_BOOKMARKS"
+  }
+}
+
 export const getMyBookmarks = () => {
   return dispatch => {
     return fetch("http://localhost:3001/api/v1/bookmarks", {
