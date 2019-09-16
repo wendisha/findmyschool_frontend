@@ -4,7 +4,7 @@ import { updateLoginForm } from "../actions/loginForm.js"
 import { login } from "../actions/currentUser.js"
 
 //props get passed into a functional component as an object argument
-const Login = ({ loginFormData, updateLoginForm, login }) => {
+const Login = ({ loginFormData, updateLoginForm, history, login }) => {
     const handleInputChange = event => {
         const { name, value } = event.target
         const updatedFormInfo = {
@@ -16,7 +16,7 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
 
     const handleSubmit = event => {
         event.preventDefault()
-        login(loginFormData)
+        login(loginFormData, history)
     }
 
     return (
