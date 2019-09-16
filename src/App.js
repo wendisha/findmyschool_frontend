@@ -31,6 +31,7 @@ class App extends React.Component {
             // this.props.currentUser ? <Logout /> : <Login />
             <div className="App">
                 {/* <Logout /> */}
+                { loggedIn ? <NavBar/> : <Home/> }
                 <NavBar />
                 {/* <MainContainer /> */}
                 <Switch>
