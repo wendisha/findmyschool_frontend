@@ -10,7 +10,7 @@ import MyBookmarks from './components/MyBookmarks.js'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
 // import MainContainer from './components/MainContainer'
-import { Route } from 'react-router-dom' //We need browser router to wrap our routes
+import { Route, Switch } from 'react-router-dom' //We need browser router to wrap our routes
 
 
 class App extends React.Component {
@@ -33,12 +33,12 @@ class App extends React.Component {
                 {/* <Logout /> */}
                 <NavBar />
                 {/* <MainContainer /> */}
-                <div>
+                <Switch>
                     <Route exact path='/' render={ () => loggedIn ? <MyBookmarks /> : <Home/> }/>
                     <Route exact path='/signup' component={ Signup }/>
                     <Route exact path='/login' component={ Login }/>
                     <Route exact path='/my-bookmarks' component={ MyBookmarks }/>
-                </div>
+                </Switch>
             </div>
   //   <div className="App">
   //     <header className="App-header">
