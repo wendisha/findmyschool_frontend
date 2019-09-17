@@ -25,8 +25,8 @@ class browseSchools extends React.Component {
 
     render (){
         return (
-            <h1>Enter your State and City to browse schools:</h1>
             <form onSubmit={handleSubmit}>
+                <h1>Enter your State and City to browse schools:</h1>
                 <input placeholder="state" value={browseFormData} type="text" name="usa_state" onChange={this.handleBrowseInput} />
                 <input type="submit" value="Browse"/>
             </form>
