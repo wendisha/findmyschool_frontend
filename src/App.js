@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Logout from './components/Logout'
+// import Logout from './components/Logout'
 import NavBar from './components/NavBar.js'
 import Login from './components/Login.js'
 import Signup from './components/Signup.js'
@@ -16,17 +16,17 @@ import { Route, Switch, withRouter } from 'react-router-dom' //We need browser r
 class App extends React.Component {
     componentDidMount() {
         // class? then props!
-        // this.props.getCurrentUser()  
+        this.props.getCurrentUser()  
         // // https://api.greatschools.org/schools/CA/Alameda?key=f474a366f74c75cceff4a25e2ff19ed7
         // https://api.greatschools.org/schools/CA/Alameda?key=f474a366f74c75cceff4a25e2ff19ed7
         // https://api.greatschools.org/schools/CA/San-Francisco/private/middle-schools?key=f474a366f74c75cceff4a25e2ff19ed7&sort=parent_rating&limit=5
-        fetch('https://api.yelp.com/v3/businesses/search?term=daycare&location=${value}&limit=5`', {
-            headers: {'Content-Type': 'application/json', 
-            'Authorization': 'Bearer WBNChu07MGYJQt8sSOSvD314iXTzJl7-eEEEf44y9wcdOcWQzsUsAs9xK0zPIgzN-kOeacc8tI39burNKOZDE9TVQuXVbs-EOeIju4rt8qUYrtSjhPePuP83pjuAXXYx',
-            'Accepts': 'application/json'} 
-        })
-        .then(r => r.json())
-        .then(r => console.log(r)  ) 
+        // fetch('https://api.yelp.com/v3/businesses/search?term=daycare&location=${value}&limit=5`', {
+        //     headers: {'Content-Type': 'application/json', 
+        //     'Authorization': 'Bearer WBNChu07MGYJQt8sSOSvD314iXTzJl7-eEEEf44y9wcdOcWQzsUsAs9xK0zPIgzN-kOeacc8tI39burNKOZDE9TVQuXVbs-EOeIju4rt8qUYrtSjhPePuP83pjuAXXYx',
+        //     'Accepts': 'application/json'} 
+        // })
+        // .then(r => r.json())
+        // .then(r => console.log(r)  ) 
     }
   
     render(){
