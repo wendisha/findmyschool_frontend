@@ -1,3 +1,10 @@
+export const listSchools = schools => {
+    return {
+        type: "LIST_SCHOOLS",
+        schools //payload: schools
+    }
+}
+
 export const fetchSchools = (state, city) => {
     const proxyurl = "https://cors-anywhere.herokuapp.com/"
     const url = `https://api.greatschools.org/schools/${state}/${city}?key=REACT_APP_GREATSCHOOLS_API_KEY`
@@ -10,6 +17,14 @@ export const fetchSchools = (state, city) => {
             }
         })
         .then(r => r.json())
-        .then(r => console.log(r) )   
+        .then(r => {
+          if (r.error) {
+            alert(r.error)
+          } else {
+            //   console.log(r)
+            dispatch(listSchools(r))
+          }
+        })
+        .catch(console.log)  
     }
 }
