@@ -4,6 +4,7 @@ import currentUser from './reducers/currentUser.js'
 import myBookmarks from './reducers/myBookmarks.js'
 import loginForm from './reducers/loginForm.js'
 import signupForm from './reducers/signupForm.js'
+import browseSchools from './reducers/browseSchools.js'
 import thunk from 'redux-thunk'
 
 //Displaying different syntax; could've user currentUser: currentUser
@@ -12,7 +13,8 @@ const reducer = combineReducers({
     currentUser, 
     loginForm, 
     myBookmarks, 
-    signupForm 
+    signupForm,
+    browseSchools 
 });
 
 // Newer way of setting up middleware
