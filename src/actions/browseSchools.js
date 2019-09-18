@@ -8,12 +8,13 @@ export const listSchools = schools => {
 export const fetchSchools = (browseFormData) => {
   console.log("fetch working", browseFormData.usa_state)
     const proxyurl = "https://cors-anywhere.herokuapp.com/"
-    const url = `https://api.greatschools.org/schools/${browseFormData.usa_state}/${browseFormData.city}?key=REACT_APP_GREATSCHOOLS_API_KEY`
+    const url = `https://api.yelp.com/v3/businesses/search?term=school&location=${zipcode}`
       return  dispatch => {
         fetch(proxyurl + url, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
+                'Authorization': 'Bearer REACT_APP_YELP_API_KEY',
                 'Content-Type': 'application/json'
             }
         })
