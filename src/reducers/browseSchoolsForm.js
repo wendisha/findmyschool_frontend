@@ -1,13 +1,10 @@
 const initialState = {
-    usa_state: '',
-    city: ''
+    zipcode: ''
   }
   
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case "UPDATE_BROWSE_SCHOOLS_FORM":
-            return action.browseSchoolsFormData
         case "LIST_SCHOOLS":
             return action.schools
         default:

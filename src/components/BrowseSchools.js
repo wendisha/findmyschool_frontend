@@ -5,8 +5,7 @@ import { fetchSchools } from '../actions/browseSchools.js';
 class BrowseSchools extends React.Component {
    
     state = {
-        usa_state: '',
-        city:''
+        zipcode: ''
     }
 
      handleSubmit = event => {
@@ -32,12 +31,11 @@ class BrowseSchools extends React.Component {
     }
     
     render (){
-        return ( 
-           
+        return (     
             <form onSubmit={ this.handleSubmit }>
-                <h1>Enter your State and City to browse schools:</h1>
-                <input placeholder="state" type="text" name="usa_state" onChange={this.onChange}/>
-                <input placeholder="city" type="text" name="city" onChange={this.onChange}/>
+                <h1>Enter zipcode to browse schools:</h1>
+                <input placeholder="zipcode" type="text" name="zipcode" onChange={this.onChange}/>
+                {/* <input placeholder="city" type="text" name="city" onChange={this.onChange}/> */}
                 <input type="submit" value="Browse"/>
             </form>
         )   
