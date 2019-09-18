@@ -5,9 +5,10 @@ export const listSchools = schools => {
     }
 }
 
-export const fetchSchools = (usa_state, city) => {
+export const fetchSchools = (browseFormData) => {
+  console.log("fetch working", browseFormData.usa_state)
     const proxyurl = "https://cors-anywhere.herokuapp.com/"
-    const url = `https://api.greatschools.org/schools/${usa_state}/${city}?key=REACT_APP_GREATSCHOOLS_API_KEY`
+    const url = `https://api.greatschools.org/schools/${browseFormData.usa_state}/${browseFormData.city}?key=REACT_APP_GREATSCHOOLS_API_KEY`
       return  dispatch => {
         fetch(proxyurl + url, {
             method: 'GET',
@@ -17,14 +18,17 @@ export const fetchSchools = (usa_state, city) => {
             }
         })
         .then(r => r.json())
-        .then(r => {
-          if (r.error) {
-            alert(r.error)
+        .then(data => {
+          console.log("fetch working",data)
+          if (data.error) {
+            alert(data.error)
           } else {
-            //   console.log(r)
-            dispatch(listSchools(r))
+            
+            // dispatch(listSchools(r))
           }
         })
         .catch(console.log)  
     }
 }
+
+//CHANGE API WOMANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
