@@ -7,6 +7,7 @@ import Login from './components/Login.js'
 import Signup from './components/Signup.js'
 import Home from './components/Home.js'
 import MyBookmarks from './components/MyBookmarks.js'
+import BrowseSchools from './components/BrowseSchools'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
 // import MainContainer from './components/MainContainer'
@@ -32,6 +33,7 @@ class App extends React.Component {
                     <Route exact path='/signup' component={ Signup }/>
                     <Route exact path='/login' component={ Login }/>
                     <Route exact path='/bookmarks' component={ MyBookmarks }/>
+                    <Route exact path='/browse-schools' component={ BrowseSchools }/>
                 </Switch>
             </div>
   //   <div className="App">
