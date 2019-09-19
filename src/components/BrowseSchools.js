@@ -10,8 +10,8 @@ class BrowseSchools extends React.Component {
 
      handleSubmit = event => {
         event.preventDefault()
-        fetchSchools(this.state)
-        console.log("hi wendy",this.state)
+        this.props.fetchSchools(this.state)
+        // console.log("hi wendy",this.state)
 
         // this.setState({
         //     email: "",
