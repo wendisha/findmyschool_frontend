@@ -11,6 +11,13 @@ export const clearBookmarks = () => {
   }
 }
 
+export const addBookmark = bookmark => {
+  return {
+    type: "ADD_BOOKMARK",
+    bookmark
+  }
+}
+
 export const getMyBookmarks = () => {
   return dispatch => {
     return fetch("http://localhost:3001/api/v1/bookmarks", {
@@ -26,6 +33,37 @@ export const getMyBookmarks = () => {
           alert(r.error)
         } else {
           dispatch(setMyBookmarks(r.data))
+        }
+      })
+      .catch(console.log)
+  }
+}
+
+export const addSchoolToBookmarks = (schoolData) => {
+  return dispatch => {
+    const sendableSchoolData = {
+      name: schoolData.name,
+      city: schoolData.location.city,
+      state: schoolData.location.state,
+      phone: schoolData.phone,
+      url: schoolData.url,
+      rating: schoolData.rating
+    }
+    return fetch("http://localhost:3001/api/v1/schools", {
+      credentials: "include",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(sendableSchoolData)
+    })
+      .then(r => r.json())
+      .then(data => {
+        console.log(data)
+        if (data.error) {
+          alert(data.error)
+        } else {
+          dispatch(addBookmark(data))
         }
       })
       .catch(console.log)
