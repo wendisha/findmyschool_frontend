@@ -8,7 +8,8 @@ const SchoolCard = ({ school }) => {
       <h3>{`Rating: ${school.rating}`}</h3>
       <p>{school.location.city}, {school.location.state}  |  {school.phone} </p>
       <img src={school.image_url} alt={`School: ${school.name}`}/><br/><br/>
-      <a target="_blank" href={school.url}>Learn more about this school</a>
+      <a target="_blank" href={school.url}>Learn more about this school</a><br/><br/>
+      <button>Bookmark this school</button>
     </div> 
   )
 }
