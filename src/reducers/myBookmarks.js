@@ -6,6 +6,8 @@ export default (state = initialState, action) => {
             return action.bookmarks
         case "CLEAR_BOOKMARKS":
             return initialState
+        case "ADD_BOOKMARK":
+            return action.bookmark
         default:
             return state
     }
