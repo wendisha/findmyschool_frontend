@@ -1,5 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+// import unsplash1 from '../../public/unsplash1.jpg';
+
+// var styles = {
+// color:'violet',
+// backgroundImage: '../../public/unsplash1.jpg'
+// };
 
 
 const Home = () => (
