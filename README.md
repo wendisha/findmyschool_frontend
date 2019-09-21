@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Find My School
 
-## Available Scripts
 
-In the project directory, you can run:
+### Description
 
-### `npm start`
+Find My School is a web application that allows a user to create an account by clicking the Sign Up option. Once a user is registered, they can browse schools by clicking this option from the Navbar. Schools are searchable by zipcode, and they can be bookmarked by the user, to be saved in their profile. Also, each school will have the option to be linked to an external site, where more information can be found about it.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Built With
 
-### `npm test`
+* [JavaScript](https://www.javascript.com/)
+* [ReactJS](https://reactjs.org/) 
+* [Redux](https://redux.js.org/)
+* [Thunk](https://github.com/reduxjs/redux-thunk)
+* [React Bootstrap](https://react-bootstrap.github.io/)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Created by
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Wendy Calderon
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## The future of Find My School
 
-### `npm run eject`
+The finished product of Find My School is expected to allow users to apply to their bookmarked schools with ease, from the same application or just a click away.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Clone down this repository.
+2. Clone down the [backe-end](https://github.com/wendisha/findmyschool_backend) repository as well.
+3. Make sure to have [RoR](https://rubyonrails.org/) installed.
+4. Run "bundle install" to install all app dependencies.
+5. Start up the back-end server by typing "rails s". It will be accessible by navigating to 'http://localhost:3001'.
+6. Start up the front-end by typing "npm start" to run the app in the development mode. A new browser should open up automatically. Alternately, it will be accessible by navigating to 'http://localhost:3000'.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Bug reports
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Feel free to report any bugs on GitHub or directly to my email: wendycalderon@gmail.com
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## License
+Find My School is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT). 
+At the same time, it is solely owned by Wendy Calderon.
