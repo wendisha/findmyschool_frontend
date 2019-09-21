@@ -2,7 +2,7 @@ export const setMyBookmarks = bookmarks => {
     return {
       type: "SET_MY_BOOKMARKS",
       bookmarks
-    }
+    } 
 }
 
 export const clearBookmarks = () => {
@@ -59,10 +59,10 @@ export const addSchoolToBookmarks = (schoolData) => {
     })
       .then(r => r.json())
       .then(data => {
-        // console.log(data)
         if (data.error) {
           alert(data.error)
         } else {
+          dispatch(getMyBookmarks())
           alert('Successfully bookmarked!');
         }
       })
