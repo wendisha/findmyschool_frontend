@@ -59,11 +59,11 @@ export const addSchoolToBookmarks = (schoolData) => {
     })
       .then(r => r.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         if (data.error) {
           alert(data.error)
         } else {
-          dispatch(addBookmark(data))
+          alert('Successfully bookmarked!');
         }
       })
       .catch(console.log)
