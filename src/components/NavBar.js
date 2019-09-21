@@ -4,22 +4,52 @@ import { connect } from 'react-redux'
 import Logout from './Logout.js'
 import { NavLink } from 'react-router-dom'
 // import { NavLink } from 'react-router-dom'
+import { Navbar, Nav , Form, Button } from 'react-bootstrap';
+// import { LinkContainer } from "react-router-bootstrap";
+
 
 //Functional Component:
 const NavBar = ({ currentUser, loggedIn }) => {
     return (
         // IMPORTANT!: Add conditional in case user doesnt have any bookmarks and link to them
 
-        
-        //DELETE BOOKMARKS FROM HERE!!!!
+        <div>
         <div className="NavBar">
-            <NavLink exact activeClassName="active" to="/bookmarks">My Bookmarks</NavLink>
-            <NavLink exact activeClassName="active" to="/browse-schools">Browse Schools</NavLink>
+            {/* <NavLink exact activeClassName="active" to="/bookmarks">My Bookmarks</NavLink>
+            <NavLink exact activeClassName="active" to="/browse-schools">Browse Schools</NavLink> */}
             {/* {currentUser ? `Welcome, ${currentUser.attributes.name}` : ""}  */}
             {/* <button>Log In</button> Or <button>Sign Up</button> */}
             {/* {currentUser ? <Logout /> : <Login />} */}
-            { loggedIn ? <Logout/> : null }
+            {/* { loggedIn ? <Logout/> : null } */}
         </div>
+
+<Navbar bg="dark" variant="dark">
+    <Navbar.Brand>Find My School</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link> <NavLink to="/bookmarks">Bookmarks</NavLink></Nav.Link>
+      {/* <Nav.Link> <Link to="/bookmarks">Bookmarks</Link></Nav.Link> */}
+      <Nav.Link> <NavLink to="/browse-schools">Browse Schools</NavLink></Nav.Link>
+      </Nav>
+      { loggedIn ? <Logout/> : null }
+    
+
+  </Navbar>
+
+  {/* 
+    <Nav className="mr-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+    </Nav>
+    <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button variant="outline-info">Search</Button>
+    </Form>
+  </Navbar> */}
+
+
+</div>
+
     )
 }
 
