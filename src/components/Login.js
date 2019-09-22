@@ -22,7 +22,7 @@ const Login = ({ loginFormData, updateLoginForm, history, login }) => {
     }
 
     return (
-      <Container expand='md'>
+      <Container>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicUsername">
           <Form.Label>Username:</Form.Label>

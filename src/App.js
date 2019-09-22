@@ -22,12 +22,8 @@ class App extends React.Component {
     render(){
         const { loggedIn } = this.props
         return ( 
-            // this.props.currentUser ? <Logout /> : <Login />
-            <div className="App">
-                {/* <Logout /> */}
+            <div>
                 { loggedIn ? <NavBar/> : <Home/> }
-                {/* <NavBar /> */}
-                {/* <MainContainer /> */}
                 <Switch>
                     {/* <Route exact path='/' render={ () => loggedIn ? <MyBookmarks /> : <Home/> }/> */}
                     <Route exact path='/signup' component={ Signup }/>

@@ -3,6 +3,8 @@
   background-image: url("assets/unsplash1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  
+
 }
 
 .App-logo {
@@ -26,6 +28,20 @@
 
 .App-link {
   color: #61dafb;
+}
+
+div#root {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10em;
 }
 
 @keyframes App-logo-spin {
@@ -58,4 +74,9 @@
 .Inner-Div {
   display: table-cell;
   vertical-align: middle;
+}
+
+.container.wendy {
+  max-width: 40%;
+  margin: auto;
 }
