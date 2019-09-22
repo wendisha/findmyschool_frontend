@@ -1,10 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import BookmarkCard from './BookmarkCard.js' 
+import { ListGroup } from 'react-bootstrap';
 
 //funtional container component:
 const MyBookmarks = props => {
-    const bookmarkCards = props.bookmarks.length > 0 ? props.bookmarks.map(b => <BookmarkCard bookmark={b} key={b.id}/>) : null
+    const bookmarkCards = props.bookmarks.length > 0 ? 
+    props.bookmarks.map(b => <ListGroup><ListGroup.Item><BookmarkCard bookmark={b} key={b.id}/></ListGroup.Item> </ListGroup>)
+    : null
     return (
         bookmarkCards
     )
