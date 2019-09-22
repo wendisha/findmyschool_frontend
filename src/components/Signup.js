@@ -22,7 +22,7 @@ const Signup = ({ signupFormData, updateSignupForm, history, signup }) => {
 
     return (
       <Container expand='md'>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit}><br/>
           <Form.Group controlId="formBasicName">
             <Form.Label>Name:</Form.Label>
             <Form.Control type="text" value={signupFormData.name} name="name" placeholder="Enter name" onChange={handleUserInfoInputChange}/>

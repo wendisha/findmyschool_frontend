@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { addSchoolToBookmarks } from '../actions/myBookmarks'
+import { ListGroup, Item } from 'react-bootstrap';
 
 const SchoolCard = ({ school, addSchoolToBookmarks }) => {
 
@@ -17,7 +18,7 @@ const SchoolCard = ({ school, addSchoolToBookmarks }) => {
       <img src={school.image_url} alt={`School: ${school.name}`}/><br/><br/>
       <a target="_blank" href={school.url}>Learn more about this school</a><br/><br/>
       <button onClick={handleClick}> Bookmark </button>
-    </div> 
+    </div>
   )
 }
 
