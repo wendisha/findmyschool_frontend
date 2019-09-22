@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { updateLoginForm } from "../actions/loginForm.js"
 import { login } from "../actions/currentUser.js"
 import { Button, Form, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
 //props get passed into a functional component as an object argument
 const Login = ({ loginFormData, updateLoginForm, history, login }) => {
@@ -33,6 +34,8 @@ const Login = ({ loginFormData, updateLoginForm, history, login }) => {
         </Form.Group>
         <Button variant="primary" type="submit" value="Log In">Log In</Button>
       </Form>
+      <br/>
+      <Link to="/">Go back to homepage</Link>
     </Container>
   )
 }
