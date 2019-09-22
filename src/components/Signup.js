@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { updateSignupForm } from "../actions/signupForm.js"
 import { signup } from "../actions/currentUser.js"
 import { Button, Form, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
 const Signup = ({ signupFormData, updateSignupForm, history, signup }) => {
 
@@ -38,6 +39,9 @@ const Signup = ({ signupFormData, updateSignupForm, history, signup }) => {
         </Form.Group>
         <Button variant="primary" type="submit" value="Sign Up">Sign Up</Button>
       </Form>
+
+      <br/>
+      <Link to="/">Go back to homepage</Link>
     </Container>
   )
 }
