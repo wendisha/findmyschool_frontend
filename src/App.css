@@ -18,9 +18,9 @@
   display: flex;
   /* flex-direction: column; */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  font-family: "helvetica", Times, serif;
+  justify-content: flex-end;
+  font-size: calc(20px + 4vmin);
+  /* font-family: "helvetica", Times, serif; */
   /* color: white; */
 }
 
