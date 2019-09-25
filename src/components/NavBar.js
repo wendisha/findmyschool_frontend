@@ -9,12 +9,8 @@ const NavBar = ({ loggedIn }) => {
         <Navbar bg="info" variant="dark" >
             <Navbar.Brand>Find My School</Navbar.Brand>
             <Nav className="mr-auto">
-                <Nav.Link> 
-                    <NavLink exact activeClassName="active" to="/bookmarks" style={{ color: '#FFF' }}>Bookmarks</NavLink>
-                </Nav.Link>
-                <Nav.Link>
-                    <NavLink exact activeClassName="active" to="/browse-schools" style={{ color: '#FFF' }}>Browse Schools</NavLink>
-                </Nav.Link>
+                <NavLink exact activeClassName="active" to="/bookmarks" style={{ color: '#FFF' }}>Bookmarks  | </NavLink>
+                <NavLink exact activeClassName="active" to="/browse-schools" style={{ color: '#FFF' }}> |  Browse Schools</NavLink>
             </Nav>
             { loggedIn ? <Logout/> : null }
         </Navbar>
