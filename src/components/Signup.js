@@ -22,7 +22,7 @@ const Signup = ({ signupFormData, updateSignupForm, history, signup }) => {
     }
 
     return (
-      <Container class="forms">
+      <Container className="forms">
         <Form onSubmit={handleSubmit}><br/>
           <Form.Group controlId="formBasicName">
             <Form.Label>Name:</Form.Label>
