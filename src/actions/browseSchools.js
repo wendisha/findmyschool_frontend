@@ -5,6 +5,13 @@ export const listSchools = schools => {
     }
 }
 
+export const clearSchools = () => {
+  return {
+      type: "CLEAR_SCHOOLS"                  
+  }
+}
+
+
 export const fetchSchools = (browseFormData) => {
   const proxyurl = "https://cors-anywhere.herokuapp.com/"
   const url = `https://api.yelp.com/v3/businesses/search?term=school&location=${browseFormData.zipcode}&limit=5`
