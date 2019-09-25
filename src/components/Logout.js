@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { logout } from "../actions/currentUser.js"
 import { withRouter } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap';
-
+ 
 //Props get passed into a functional component as an object argument
 const Logout = ({ logout, history  }) => {
   return (
