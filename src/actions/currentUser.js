@@ -1,6 +1,7 @@
 import { resetLoginForm } from "./loginForm.js"
 import { resetSignupForm } from "./signupForm.js"
 import { getMyBookmarks, clearBookmarks } from "./myBookmarks.js"
+import { clearSchools } from './browseSchools'
 
 //SYNCHRONOUS ACTION return POJOS (plain old js objects)
 export const setCurrentUser = user => {
@@ -103,5 +104,14 @@ export const logout = () => {
             credentials: "include",
             method: "DELETE"
         })
+        .then(r => r.json())
+        .then(r => {
+            if (r.error) {
+                alert(r.error)
+            } else {
+                dispatch(clearSchools())
+            }
+        })
+        .catch(console.log)
     }
 }
