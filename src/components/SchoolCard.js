@@ -10,6 +10,7 @@ const SchoolCard = ({ school, addSchoolToBookmarks }) => {
   }
 
   return ( 
+    <div>
     <div key={school.id}>
       <h1>{school.name}</h1>
       <h3>{`Rating: ${school.rating}`}</h3>
@@ -17,6 +18,7 @@ const SchoolCard = ({ school, addSchoolToBookmarks }) => {
       <img src={school.image_url} alt={`School: ${school.name}`}/><br/><br/>
       <a target="_blank" href={school.url}>Learn more about this school</a><br/><br/>
       <button onClick={handleClick}> Bookmark </button>
+    </div>
     </div>
   )
 }
