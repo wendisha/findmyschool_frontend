@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { addSchoolToBookmarks } from '../actions/myBookmarks'
-import { ListGroup, Item } from 'react-bootstrap';
+import { addSchoolToBookmarks } from '../actions/myBookmarks']
 
 const SchoolCard = ({ school, addSchoolToBookmarks }) => {
 
