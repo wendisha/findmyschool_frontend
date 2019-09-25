@@ -17,6 +17,22 @@ const reducer = combineReducers({
     browseSchoolsForm
 });
 
+
+///////////////////////////////////////
+
+// STORE = {
+//     state: {
+//         currentUser: {},
+//         loginFOrm: {},
+//         myBookmarks: [],
+//         signupForm: {},
+//         browserSchoolsForm: []
+//     },
+
+//     dispatch {}
+// }
+///////////////////////////
+
 // Newer way of setting up middleware
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
