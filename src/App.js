@@ -20,23 +20,20 @@ class App extends React.Component {
         // class? then props!
         this.props.getCurrentUser()  
     }
-
     
     handleFormClick = () => {
-    //  event.preventDefault()
         this.setState(prevState => ({
         clicked: !prevState.clicked
         }))
     }
-  //pass history as props to home or set up route!!!
+
+    //Pass history as props to home or set up route!!!
     render(){
         const { loggedIn } = this.props
         return ( 
             <div>
-                
                 { loggedIn ? <NavBar/> : <Home clicked={this.state.clicked} handleFormClick={this.handleFormClick} />  }
                 <Switch>
-                    {/* <Route exact path='/' render={ () => loggedIn ? <MyBookmarks /> : <Home/> }/> */}
                     <Route exact path='/signup' component={ Signup }/>
                     <Route exact path='/login' component={ Login }/>
                     <Route exact path='/bookmarks' component={ MyBookmarks }/>
