@@ -19,11 +19,9 @@ const ListSchools = (props) => {
 }
 
 const mapStateToProps = state => {
-    // const userId = state.currentUser ? state.currentUser.id : ""
     return {
         schoolsList: state.browseSchoolsForm
-        // userId
     }
 }
 
-export default connect(mapStateToProps, {addSchoolToBookmarks})(ListSchools);
+export default connect(mapStateToProps, { addSchoolToBookmarks })(ListSchools);
