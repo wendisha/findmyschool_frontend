@@ -23,7 +23,7 @@ handleFormClick = () => {
 
   render () {
     return (
-      <div class="welcome">
+      <div className="welcome">
         <Row>
           <Col>
             <h3>Welcome to</h3>
