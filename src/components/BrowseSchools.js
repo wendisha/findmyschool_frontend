@@ -43,5 +43,6 @@ const mapStateToProps = state => {
     }
 }
 
+
 //fetchSchools is being dispatched to props
 export default connect( mapStateToProps, { fetchSchools } ) (BrowseSchools);
