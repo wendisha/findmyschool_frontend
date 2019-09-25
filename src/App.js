@@ -1,7 +1,5 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
-// import Logout from './components/Logout'
 import NavBar from './components/NavBar.js'
 import Login from './components/Login.js'
 import Signup from './components/Signup.js'
@@ -10,20 +8,33 @@ import MyBookmarks from './components/MyBookmarks.js'
 import BrowseSchools from './components/BrowseSchools'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
-// import MainContainer from './components/MainContainer'
 import { Route, Switch, withRouter } from 'react-router-dom' //We need browser router to wrap our routes
 
 class App extends React.Component {
+
+    state = {
+        clicked: false
+    }
+
     componentDidMount() {
         // class? then props!
         this.props.getCurrentUser()  
     }
-  
+
+    
+    handleFormClick = () => {
+    //  event.preventDefault()
+        this.setState(prevState => ({
+        clicked: !prevState.clicked
+        }))
+    }
+  //pass history as props to home or set up route!!!
     render(){
         const { loggedIn } = this.props
         return ( 
             <div>
-                { loggedIn ? <NavBar/> : <Home/> }
+                
+                { loggedIn ? <NavBar/> : <Home clicked={this.state.clicked} handleFormClick={this.handleFormClick} />  }
                 <Switch>
                     {/* <Route exact path='/' render={ () => loggedIn ? <MyBookmarks /> : <Home/> }/> */}
                     <Route exact path='/signup' component={ Signup }/>
