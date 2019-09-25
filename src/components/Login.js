@@ -7,22 +7,23 @@ import { Link } from 'react-router-dom'
 
 //props get passed into a functional component as an object argument
 const Login = ({ loginFormData, updateLoginForm, history, login }) => {
-    const handleInputChange = event => {
-        const { name, value } = event.target
-        const updatedFormInfo = {
-          ...loginFormData,
-          [name]: value
-        }
-        updateLoginForm(updatedFormInfo)
+  
+  const handleInputChange = event => {
+    const { name, value } = event.target
+    const updatedFormInfo = {
+      ...loginFormData,
+      [name]: value
     }
+    updateLoginForm(updatedFormInfo)
+  }
 
-    const handleSubmit = event => {
-        event.preventDefault()
-        login(loginFormData, history)
-    }
+  const handleSubmit = event => {
+    event.preventDefault()
+    login(loginFormData, history)
+  }
 
-    return (
-      <Container>
+  return (
+    <Container>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicUsername">
           <Form.Label>Username:</Form.Label>
@@ -42,9 +43,9 @@ const Login = ({ loginFormData, updateLoginForm, history, login }) => {
 
 //mapstatetoprops gives us access to chunks of state from the store as props, that we can use as an argument to this component in the form of an object
 const mapStateToProps = state => {
-    return {
-      loginFormData: state.loginForm
-    }
+  return {
+    loginFormData: state.loginForm
+  }
 }
 
 //Connect is a function that takes up to 4 arguments, and returns a function that takes a component and returns a component
