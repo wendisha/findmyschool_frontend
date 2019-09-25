@@ -1,8 +1,8 @@
 export const setMyBookmarks = bookmarks => {
-    return {
-      type: "SET_MY_BOOKMARKS",
-      bookmarks
-    } 
+  return {
+    type: "SET_MY_BOOKMARKS",
+    bookmarks
+  } 
 }
 
 export const clearBookmarks = () => {
@@ -27,15 +27,15 @@ export const getMyBookmarks = () => {
         "Content-Type": "application/json"
       },
     })
-      .then(r => r.json())
-      .then(r => {
-        if (r.error) {
-          alert(r.error)
-        } else {
-          dispatch(setMyBookmarks(r.data))
-        }
-      })
-      .catch(console.log)
+    .then(r => r.json())
+    .then(r => {
+      if (r.error) {
+        alert(r.error)
+      } else {
+        dispatch(setMyBookmarks(r.data))
+      }
+    })
+    .catch(console.log)
   }
 }
 
@@ -57,15 +57,15 @@ export const addSchoolToBookmarks = (schoolData) => {
       },
       body: JSON.stringify(sendableSchoolData)
     })
-      .then(r => r.json())
-      .then(data => {
-        if (data.error) {
-          alert(data.error)
-        } else {
-          dispatch(getMyBookmarks())
-          alert('Successfully bookmarked!');
-        }
-      })
-      .catch(console.log)
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        alert(data.error)
+      } else {
+        dispatch(getMyBookmarks())
+        alert('Successfully bookmarked!');
+      }
+    })
+    .catch(console.log)
   }
 }
