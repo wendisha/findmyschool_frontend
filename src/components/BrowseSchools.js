@@ -9,27 +9,21 @@ class BrowseSchools extends React.Component {
         zipcode: ''
     }
 
-     handleSubmit = event => {
+    handleSubmit = event => {
         event.preventDefault()
-        this.props.fetchSchools(this.state) 
-        // this.setState({
-        //     email: "",
-        //     password: ""
-        //   })
-        // };
-      //reset the React state after submit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    
-     }
+        this.props.fetchSchools(this.state)  
+    }
    
     onChange = (event) => {
         this.setState({
           [event.target.name]: event.target.value
         })
     }
- 
+
+    // <> </> is called fragment 
     render (){
         return (     
-            <> 
+            <>  
             <form onSubmit={ this.handleSubmit }>
                 <h1>Enter zipcode to browse schools:</h1>
                 <input placeholder="zipcode" type="text" name="zipcode" onChange={this.onChange}/>
@@ -41,8 +35,6 @@ class BrowseSchools extends React.Component {
     }   
 }
 
-// {/* <> </> is called fragment */}
-
 const mapStateToProps = state => {
     return {
         browseFormData: state.browseSchoolsForm,
@@ -51,4 +43,5 @@ const mapStateToProps = state => {
     }
 }
 
+//fetchSchools is being dispatched to props
 export default connect( mapStateToProps, { fetchSchools } ) (BrowseSchools);
