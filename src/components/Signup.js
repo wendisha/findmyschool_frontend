@@ -22,7 +22,7 @@ const Signup = ({ signupFormData, updateSignupForm, history, signup }) => {
     }
 
     return (
-      <Container expand='md'>
+      <Container class="forms">
         <Form onSubmit={handleSubmit}><br/>
           <Form.Group controlId="formBasicName">
             <Form.Label>Name:</Form.Label>
@@ -47,9 +47,9 @@ const Signup = ({ signupFormData, updateSignupForm, history, signup }) => {
 }
 
 const mapStateToProps = state => {
-    return {
-      signupFormData: state.signupForm
-    }
+  return {
+    signupFormData: state.signupForm
+  }
 }
   
 export default connect(mapStateToProps, { updateSignupForm, signup } )(Signup)
