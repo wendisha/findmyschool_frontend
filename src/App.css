@@ -3,8 +3,6 @@
   background-image: url("assets/unsplash1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  
-
 }
 
 .App-logo {
@@ -30,8 +28,16 @@
   color: #61dafb;
 }
 
-div#root {
+.welcome {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50vh;
+  /* flex-wrap: nowrap; */
+}
+
+.forms {
+  /* display: flex; */
   justify-content: flex-end;
   align-items: center;
   height: 100vh;
