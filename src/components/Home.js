@@ -22,10 +22,8 @@ handleFormClick = () => {
 }
 
   render () {
-    
-      return (
-    
-        <div class="welcome">
+    return (
+      <div class="welcome">
         <Row>
           <Col>
             <h3>Welcome to</h3>
@@ -39,9 +37,9 @@ handleFormClick = () => {
           </Col>
         </Row>
       </div>
-      )}
+    )}
   };
 
-  //use the ternary to check for the url instead
+//Use the ternary to check for the url instead, to fix situation with buttons
   
 export default Home;
