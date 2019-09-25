@@ -1,5 +1,5 @@
 import React from 'react'
-import MyBookmarks from './MyBookmarks.js'  //is .js necessary????
+import MyBookmarks from './MyBookmarks'
 
 const MainContainer = () => {
   return (
